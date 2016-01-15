@@ -1,2 +1,3 @@
-**miniBlog**
-simple php Blog
+# miniBlog
+**simple php Blog
+A php learning project
