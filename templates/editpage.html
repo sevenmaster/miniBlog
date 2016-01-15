@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Neuer Eintrag...</title>
+    <link rel="stylesheet" type="text/css" href="/miniBlog/external/style.css">
+</head>
+<body>
+    <p>Schreibe einen neuen Blogeintrag.</p>
+    <form action="/miniBlog/create.php" method="post">
+        Titel: <input type="text" name="title" autocomplete="off" maxlength="25" placeholder="Titel deines Eintrags" size="40" autofocus>
+        <input type="color" name="color"><br>
+        Text: <br>
+        <textarea name="text" cols="40" rows="5" placeholder="Inhalt deines Blogeintrags."></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
