@@ -1,9 +1,9 @@
 <?php
     //german date layout
     setlocale(LC_TIME, 'de_DE@euro', 'de_DE', 'de', 'ge');
-    echo "<hr>";
     //puts file creation date and filename of all files in the content folder in arrarys
 	include("./templates/mainpage.html");
+	include("./templates/controlls.html");
 	$entrys = array();      
     $handle=opendir ("./content/");
     while($datei = readdir($handle)){       
@@ -35,5 +35,4 @@
 		echo $link;
 		echo "<hr>";
 	}
-	echo '<a href="./templates/editpage.html">Neuer Blogeintrag</a>';
 ?>

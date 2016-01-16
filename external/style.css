@@ -21,7 +21,7 @@ h1 {
     text-align: left;
     color: #f8f8ff;
     border-bottom: 1px solid #cccccc;
-    position: fixed;
+    position: absolute;
     padding: 15px 0px;
     box-shadow: 10px 10px 50px 20px #0078A8 inset;
     right: 0px;
@@ -34,11 +34,26 @@ h1 {
     background-color: #0078A8;
     text-transform: uppercase;
 }
+header {
+    padding-bottom: 65px;
+}
+#footer{
+    color: #f8f8ff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    padding: 5px 0px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #0078A8;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
 h2{
     color: #0078A8;
 }
 input{
-    margin: 50px 0px;
     margin-bottom: 0px;
     border: 1px solid white;
 	border-radius: 3px;
