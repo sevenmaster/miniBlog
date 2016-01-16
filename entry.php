@@ -1,4 +1,5 @@
 <?php
+    //"/"ersetzen
     //mainpage
     include("./templates/mainpage.html");
     //decodes linkname

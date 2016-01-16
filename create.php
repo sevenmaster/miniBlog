@@ -1,4 +1,6 @@
 <?php
+    //spitze klammern ersetzen
+    //"/" removen
     //if title and text ist not empty
     if($_POST["title"] != "" AND $_POST["text"] != ""){
         $filename =  $_POST["title"] . '.html';
@@ -9,6 +11,12 @@
         //bulilds html file
         $headline = "<h2>" . $_POST['title'] . "</h2>";
         $content = "<p>" . $_POST['text'] . "</p>";
+                    $headline = mb_convert_encoding($headline, 
+                'UTF-8', mb_detect_encoding($headline));
+        $content = mb_convert_encoding($content, 
+                'UTF-8', mb_detect_encoding($content));
+        // File header indicating that the file is UTF-8
+        fwrite($datei, pack("CCC",0xef,0xbb,0xbf));
             fwrite($datei, $headline,25);
             fwrite($datei, $content,5555);
         fclose($datei);

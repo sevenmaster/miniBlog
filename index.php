@@ -1,4 +1,5 @@
 <?php
+    //TODO include durch file get content
     //german date layout
     setlocale(LC_TIME, 'de_DE@euro', 'de_DE', 'de', 'ge');
     //puts file creation date and filename of all files in the content folder in arrarys
