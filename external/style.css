@@ -6,12 +6,8 @@
     box-sizing: border-box;
 }
 body {
-    max-width: 1000px;
     margin: 0 auto;
-    padding: 10px;
     overflow-y: scroll;
-    padding-top: 20px;
-    padding-bottom: 100px;
 }
 html {
     background: #f8f8ff;
@@ -45,13 +41,19 @@ header {
     padding: 5px 0px;
     border-top: 1px solid #e5e5e5;
     background-color: #0078A8;
-    position: relative;
+    position: absolute;
     bottom: 0;
     right: 0;
     left: 0;
 }
-#footerwrapper {
+#contentwrapper {
     min-height: 100%;
+    position: relative;
+}
+#content {
+    padding: 50px 10px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 body, html {
     height: 100%;
