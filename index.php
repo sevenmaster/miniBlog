@@ -1,15 +1,14 @@
 <?php
-    //TODO echo file_get_contents durch file get content
     //german date layout
     setlocale(LC_TIME, 'de_DE@euro', 'de_DE', 'de', 'ge');
-    //puts file creation date and filename of all files in the content folder in arrarys
 	$fullpage = file_get_contents("./templates/mainpage.html");
 	$delimiter = "<!--f-->";
 	$page = array();
 	$page = explode($delimiter, $fullpage);
 	echo $page[0];
 	echo file_get_contents("./templates/controlls.html");
-	$entrys = array();      
+	$entrys = array();
+	//puts file creation date and filename of all files in the content folder in arrarys
     $handle=opendir ("./content/");
     while($datei = readdir($handle)){       
          if($datei!="." AND $datei!=".."){
@@ -17,6 +16,11 @@
 			$entrys[] = $datei;
 		}
     }
+	//Prevents error message if there are no entrys yet
+	if (empty($entrys)){
+	 echo "Keine Einträge";
+	}
+	else{
     closedir($handle);
     //sorts entrys by file creation time
     if (isset($_POST['old'])){
@@ -36,12 +40,16 @@
 		$replace = "_";
 		$subject = $entrys[$key];
 	    $link2 = str_replace ($search , $replace , $subject);
-	    $search = "/";
-        $replace = "&frasl";
+
+		$search = "/";
+        $replace = "&#47;";
+		$subject = $link2;
         $file = str_replace ($search , $replace , $subject);
-		$link = '<a href=./entry.php?entry=' . $link2 . '>weiter lesen</a>';
+
+		$link = '<a href="./entry.php?entry=' . $file . '">weiter lesen</a>';
 		echo $link;
 		echo "<hr>";
+	}
 	}
 	echo $page[1];
 ?>

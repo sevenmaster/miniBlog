@@ -13,7 +13,7 @@ html {
     background: #f8f8ff;
 }
 h1 {
-    margin:0px auto;
+    margin:0px, auto;
     text-align: left;
     color: #f8f8ff;
     border-bottom: 1px solid #cccccc;
@@ -52,8 +52,14 @@ header {
 }
 #content {
     padding: 50px 10px;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
+}
+#left{
+    text-align: left;
+}
+#editpage {
+    text-align: center;
 }
 body, html {
     height: 100%;

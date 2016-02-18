@@ -2,18 +2,23 @@
 <html>
 <head>
     <title>Mini Blog</title>
-    <link rel="stylesheet" type="text/css" href="external/style.css">
+    <link rel="stylesheet" type="text/css" href="../external/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 <body>
-    <p>Schreibe einen neuen Blogeintrag.</p>
-    <form action="/miniBlog/create.php" method="post">
-        Titel: <input type="text" name="title" autocomplete="off" maxlength="25" placeholder="Titel deines Eintrags" size="40" autofocus>
-        <input type="color" name="color"><br>
-        Text: <br>
-        <textarea name="text" cols="40" rows="5" placeholder="Inhalt deines Blogeintrags."></textarea><br>
-        <input type="submit" value="Submit">
-    </form>
+	<header>
+		<a href="../"><h1>Mini Blog</h1></a>
+    </header>
+	<br>
+	<div id="editpage">
+		<h2>Schreibe einen neuen Blogeintrag:</h2>
+		<form action="/miniBlog/create.php" method="post">
+			<input type="text" name="title" autocomplete="off" maxlength="25" placeholder="Titel deines Eintrags" size="40" autofocus><br><br>
+			<textarea name="text" cols="40" rows="5" placeholder="Inhalt deines Blogeintrags."></textarea><br>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+	
 </body>
 </html>
